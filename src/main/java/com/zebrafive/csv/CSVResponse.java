@@ -12,5 +12,6 @@ public class CSVResponse {
     public List<String[]> getAllRecords() {
         List<String[]> allRecords = new ArrayList<>();
         allRecords.add(new String[]{"value1", "value2"});
+        return allRecords;
     }
 }
