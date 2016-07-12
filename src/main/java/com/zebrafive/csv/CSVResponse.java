@@ -1,21 +1,17 @@
 package com.zebrafive.csv;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class CSVResponse {
 
-    private List<String> fieldNames;
-    private List<CSVRecord> csvRecords;
+    private List<String> fieldNames = new ArrayList<>();
+    private List<CSVRecord> csvRecords = new ArrayList<>();
 
-    public CSVResponse() {
-        fieldNames = new ArrayList<>();
-        csvRecords = new ArrayList<>();
+    public CSVResponse withFieldNames(String... fieldNames) {
+        this.fieldNames.addAll(Arrays.asList(fieldNames));
     }
-
+    
     public String[] getFieldNames() {
         return fieldNames.toArray(new String[fieldNames.size()]);
     }
