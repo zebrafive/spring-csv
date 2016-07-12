@@ -37,9 +37,9 @@ public class CSVResponse {
         private Map<String, Object> fieldValues = new HashMap<>();
 
         public String[] getFieldValues() {
-            return (String[]) fieldNames.stream()
+            return fieldNames.stream()
                     .map(fieldName -> fieldValues.get(fieldName) != null ? fieldValues.get(fieldName).toString() : "")
-                    .toArray();
+                    .toArray(String[]::new);
         }
 
         public CSVRecord withField(String fieldName, Object fieldValue) {
