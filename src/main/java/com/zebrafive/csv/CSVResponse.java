@@ -10,6 +10,7 @@ public class CSVResponse {
 
     public CSVResponse withFieldNames(String... fieldNames) {
         this.fieldNames.addAll(Arrays.asList(fieldNames));
+        return this;
     }
     
     public String[] getFieldNames() {
